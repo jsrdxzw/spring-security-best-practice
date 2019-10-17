@@ -1,0 +1,10 @@
+plugins {
+    id "org.springframework.boot" version "2.2.0.RELEASE"
+}
+
+dependencies {
+    implementation project(':security-core')
+    implementation project(':security-app')
+    implementation project(':security-browser')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+}

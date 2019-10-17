@@ -1,0 +1,6 @@
+rootProject.name = 'best-security-practice'
+include 'security-core'
+include 'security-browser'
+include 'security-app'
+include 'security-demo'
+
