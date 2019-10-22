@@ -1,0 +1,13 @@
+def springSocialVersion = '1.1.6.RELEASE'
+
+dependencies {
+    api 'org.springframework.cloud:spring-cloud-starter-oauth2'
+    api 'org.springframework.boot:spring-boot-starter-data-redis'
+    api 'org.springframework.boot:spring-boot-starter-jdbc'
+    api 'mysql:mysql-connector-java'
+    api "org.springframework.social:spring-social-core:${springSocialVersion}"
+    api "org.springframework.social:spring-social-config:${springSocialVersion}"
+    api "org.springframework.social:spring-social-security:${springSocialVersion}"
+    api "org.springframework.social:spring-social-web:${springSocialVersion}"
+    api 'org.apache.commons:commons-lang3'
+}

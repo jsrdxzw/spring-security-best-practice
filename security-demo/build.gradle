@@ -2,9 +2,13 @@ plugins {
     id "org.springframework.boot" version "2.2.0.RELEASE"
 }
 
+def lombokVersion = '1.18.10'
+
 dependencies {
-    implementation project(':security-core')
-    implementation project(':security-app')
     implementation project(':security-browser')
+    implementation project(':security-core')
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
