@@ -2,7 +2,6 @@ package com.jsrdxzw.web.controller;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import com.jsrdxzw.dto.User;
-import com.jsrdxzw.exception.UserNotExistException;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -45,10 +44,10 @@ public class UserController {
     @GetMapping("/{id:\\d+}")
     @JsonView(User.UserDetailView.class)
     public User getInfo(@PathVariable String id) {
-        throw new UserNotExistException("not found", Long.parseLong(id));
-//        User user = new User();
-//        user.setUsername("tom");
-//        return user;
+//        throw new UserNotExistException("not found", Long.parseLong(id));
+        User user = new User();
+        user.setUsername("tom");
+        return user;
     }
 
     /**
