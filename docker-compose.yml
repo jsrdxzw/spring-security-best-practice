@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  mysql:
+    environment:
+      MYSQL_ROOT_PASSWORD: "jsrdxzw?"
+      MYSQL_DATABASE: "security-practice"
+    image: "docker.io/mysql:latest"
+    restart: always
+    ports:
+      - "3306:3306"
+    command:
+      --character-set-server=utf8mb4
+      --default-authentication-plugin=mysql_native_password
+      --collation-server=utf8mb4_general_ci
